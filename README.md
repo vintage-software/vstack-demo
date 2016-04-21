@@ -1,4 +1,4 @@
-# gnat-bootstrap
+# vstack-demo
 Gulp, Node, Angular2, Typescript + C# MVC6 Bootstrap
 
 An opinionated boostrap project for client, server and tooling. All done in typescript.
@@ -6,12 +6,12 @@ An opinionated boostrap project for client, server and tooling. All done in type
 ####Server:
 - Language: [Roslyn (C# 6)](https://github.com/dotnet/roslyn)
 - Framework: [ASP.NET Core MVC](https://github.com/aspnet/Mvc)
-- Services: [Vstack Services](https://github.com/vintage-software/vstack-services)
+- Services: [vstack-services](https://github.com/vintage-software/vstack-services)
 
 ####Client 1:
 - Language: [TypeScript](https://github.com/Microsoft/TypeScript)
 - Framework: [Angular2](https://github.com/angular/angular/tree/master/modules/angular2)
-- Services: [Vstack Graph](https://github.com/vintage-software/vstack-graph)
+- Services: [vstack-graph](https://github.com/vintage-software/vstack-graph)
 - Css: [Angular Material 2](https://github.com/angular/material2)
 
 ####Client 1 Server:
@@ -22,12 +22,12 @@ An opinionated boostrap project for client, server and tooling. All done in type
 ####Client 1 Tooling:
 - Language: [TypeScript](https://github.com/Microsoft/TypeScript)
 - Framework: [Gulp](https://github.com/gulpjs/gulp)
-- Interface Generation: [Vstack TypeScript Generator](https://github.com/vintage-software/vstack-typescript-generator)
+- Interface Generation: [vstack-typescript-generator](https://github.com/vintage-software/vstack-typescript-generator)
 
 ####Client 2:
 - Language: [TypeScript](https://github.com/Microsoft/TypeScript)
 - Framework: [Ionic 2](https://github.com/driftyco/ionic/tree/2.0)
-- Services: [Vstack Graph](https://github.com/vintage-software/vstack-graph)
+- Services: [vstack-graph](https://github.com/vintage-software/vstack-graph)
 - Css: [Angular Material 2](https://github.com/angular/material2)
 
 ####Client 3:
