@@ -3,13 +3,14 @@ import * as gulp from 'gulp';
 import * as concat from 'gulp-concat';
 import * as sourcemaps from 'gulp-sourcemaps';
 import * as typescript from 'gulp-typescript';
+import * as inject from 'gulp-inject';
+import * as sass from 'gulp-sass';
 import * as del from 'del';
 
-class Config {
-  outDir: string = '../../dist';
-}
-
 class ServerConfig {
+  outDir: any = {
+    root: '../../dist'
+  };
   tsConfig: string = '../server/tsconfig.json';
   sourceFiles: string[] = [
     '../server/**/*.ts',
@@ -18,6 +19,30 @@ class ServerConfig {
 }
 
 class ClientConfig {
+  outDir: any = {
+    root: '../../dist',
+    javaScript: '../../dist/assets/js',
+    css: '../../dist/assets/styles'
+  };
+  html: any = {
+    rootSrc: '../client/index.html'
+  };
+  sass: any = {
+    src: [
+      '../client/assets/styles/app.scss'
+    ]
+  };
+  javascript: any = {
+    src: [
+      '../../node_modules/es6-shim/es6-shim.js',
+      '../../node_modules/angular2/bundles/angular2-polyfills.js',
+      '../../node_modules/systemjs/dist/system.src.js',
+      '../../node_modules/rxjs/bundles/Rx.js',
+      '../../node_modules/angular2/bundles/angular2.dev.js',
+      '../../node_modules/angular2/bundles/http.dev.js',
+      '../../node_modules/angular2/bundles/router.dev.js',
+    ]
+  };
   tsConfig: string = '../client/tsconfig.json';
   sourceFiles: string[] = [
     '../client/**/*.ts',
@@ -27,15 +52,13 @@ class ClientConfig {
 
 @Gulpclass()
 export class GulpFile {
-  private _config: Config = new Config();
-
   private _serverConfig: ServerConfig = new ServerConfig();
 
   private _clientConfig: ClientConfig = new ClientConfig();
 
   @Task()
   clean() {
-    return del(`${this._config.outDir}/**`, { force: true });
+    return del([`${this._clientConfig.outDir.root}/**`, `${this._serverConfig.outDir.root}/**`], { force: true });
   }
 
   @SequenceTask()
@@ -50,7 +73,7 @@ export class GulpFile {
 
   @SequenceTask()
   buildClient() {
-    return ['_buildClientApp', '_buildClientIndex'];
+    return ['_buildClientApp', '_transferDependencies', '_buildSass', '_buildClientIndex'];
   }
 
   @Task()
@@ -64,7 +87,7 @@ export class GulpFile {
     return tsResult.js
       .pipe(concat('server.js'))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest(this._config.outDir));
+      .pipe(gulp.dest(this._clientConfig.outDir.root));
   }
 
   @Task()
@@ -77,19 +100,31 @@ export class GulpFile {
 
     return tsResult.js
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest(this._config.outDir));
+      .pipe(gulp.dest(this._clientConfig.outDir.root));
+  }
+
+  @Task()
+  _buildSass() {
+    return gulp.src(this._clientConfig.sass.src)
+      .pipe(sass())
+      .pipe(gulp.dest(this._clientConfig.outDir.css));
+  }
+
+  @Task()
+  _transferDependencies() {
+    return gulp.src(this._clientConfig.javascript.src)
+      .pipe(gulp.dest(this._clientConfig.outDir.javaScript));
   }
 
   @Task()
   _buildClientIndex() {
-    let tsProject = typescript.createProject(this._clientConfig.tsConfig);
-    let tsResult = gulp
-      .src(this._clientConfig.sourceFiles)
-      .pipe(sourcemaps.init())
-      .pipe(typescript(tsProject));
+    let target = gulp.src(this._clientConfig.html.rootSrc);
+    let jsFiles = this._clientConfig.javascript.src.map(file => `${this._clientConfig.outDir.javaScript}/${file.replace(/^.*[\\\/]/, '')}`);
+    let cssFiles = `${this._clientConfig.outDir.css}/**/*.css`;
+    let sources = gulp.src(jsFiles.concat(cssFiles), { read: false });
 
-    return tsResult.js
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(this._config.outDir));
+    return target
+      .pipe(inject(sources, { ignorePath: '../../dist' }))
+      .pipe(gulp.dest(this._clientConfig.outDir.root));
   }
 }
