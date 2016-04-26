@@ -7,9 +7,7 @@
     "postinstall": "cd src/dev && typings install && cd ../client && typings install && cd ../server && typings install",
     "clean": "cd src/dev && gulp clean",
     "build": "cd src/dev && gulp build",
-    "buildserver": "cd src/dev && gulp buildServer",
-    "buildclient": "cd src/dev && gulp buildClient",
-    "serveclient": "cd dist && browser-sync start --server",
+    "serve": "cd dist && browser-sync start --server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +21,7 @@
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.25",
     "tsd": "^0.6.5",
+    "vstack-graph": "^0.1.2",
     "zone.js": "0.6.6"
   },
   "devDependencies": {

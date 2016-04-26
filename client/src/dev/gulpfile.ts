@@ -22,10 +22,12 @@ class ClientConfig {
   outDir: any = {
     root: '../../dist',
     javaScript: '../../dist/assets/js',
-    css: '../../dist/assets/styles'
+    css: '../../dist/assets/styles',
+    html: '../../dist/app'
   };
   html: any = {
-    rootSrc: '../client/index.html'
+    rootSrc: '../client/index.html',
+    src: '../client/app/**/*.html'
   };
   sass: any = {
     src: [
@@ -46,6 +48,7 @@ class ClientConfig {
   tsConfig: string = '../client/tsconfig.json';
   sourceFiles: string[] = [
     '../client/**/*.ts',
+    '../../node_modules/vstack-graph/dist/vstack-graph.d.ts', // TODO: is this correct?
     '!../client/typings/main/**/*.*',
     '!../client/typings/main.d.ts'];
 }
@@ -73,7 +76,7 @@ export class GulpFile {
 
   @SequenceTask()
   buildClient() {
-    return ['_buildClientApp', '_transferDependencies', '_buildSass', '_buildClientIndex'];
+    return ['_buildClientApp', '_transferDependencies', '_buildSass', '_transferHtml', '_buildClientIndex'];
   }
 
   @Task()
@@ -114,6 +117,12 @@ export class GulpFile {
   _transferDependencies() {
     return gulp.src(this._clientConfig.javascript.src)
       .pipe(gulp.dest(this._clientConfig.outDir.javaScript));
+  }
+
+  @Task()
+  _transferHtml() {
+    return gulp.src(this._clientConfig.html.src)
+      .pipe(gulp.dest(this._clientConfig.outDir.html));
   }
 
   @Task()
