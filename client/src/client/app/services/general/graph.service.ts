@@ -1,4 +1,5 @@
-import {GraphService as BaseGraphService, ServiceConfig, Mapping} from 'vstack-graph';
+import {Injectable} from 'angular2/core';
+import {BaseGraphService, ServiceConfig, Mapping} from 'vstack-graph';
 
 import {Company} from './../../model/company';
 import {Employee} from './../../model/employee';
@@ -6,6 +7,7 @@ import {CompanyService} from './../company.service';
 import {EmployeeService} from './../employee.service';
 import {Graph} from './graph';
 
+@Injectable()
 export class GraphService extends BaseGraphService<Graph> {
   constructor(public companyService: CompanyService, public employeeService: EmployeeService) {
     super([

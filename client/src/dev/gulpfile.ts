@@ -43,12 +43,12 @@ class ClientConfig {
       '../../node_modules/angular2/bundles/angular2.dev.js',
       '../../node_modules/angular2/bundles/http.dev.js',
       '../../node_modules/angular2/bundles/router.dev.js',
+      '../../node_modules/vstack-graph/bundles/vstack-graph.min.js'
     ]
   };
   tsConfig: string = '../client/tsconfig.json';
   sourceFiles: string[] = [
     '../client/**/*.ts',
-    '../../node_modules/vstack-graph/dist/vstack-graph.d.ts', // TODO: is this correct?
     '!../client/typings/main/**/*.*',
     '!../client/typings/main.d.ts'];
 }
