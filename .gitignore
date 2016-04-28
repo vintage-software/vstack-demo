@@ -35,5 +35,5 @@ node_modules
 
 **/.DS_Store
 
-client/dist
-client/**/typings
+angular2-client/dist
+angular2-client/**/typings

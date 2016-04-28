@@ -8,6 +8,7 @@
     "clean": "cd src/dev && gulp clean",
     "build": "cd src/dev && gulp build",
     "serve": "cd src/dev && gulp serve",
+    "go": "npm run build && cd dist && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
     "zone.js": "0.6.6"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "browser-sync": "^2.12.5",
     "del": "2.2.0",
     "gulp": "3.9.1",

@@ -48,6 +48,11 @@ class ClientConfig {
       '../../node_modules/vstack-graph/bundles/vstack-graph.min.js'
     ]
   };
+  css: any = {
+    src: [
+      '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+    ]
+  };
   tsConfig: string = '../client/tsconfig.json';
   sourceFiles: string[] = [
     '../client/**/*.ts',
@@ -78,16 +83,16 @@ export class GulpFile {
 
   @SequenceTask()
   buildClient() {
-    return ['_buildClientApp', '_transferDependencies', '_buildSass', '_transferHtml', '_buildClientIndex'];
+    return ['_buildClientApp', '_transferJsDependencies', '_transferCssDependencies', '_buildSass', '_transferHtml', '_buildClientIndex'];
+  }
+
+  @Task('serve', ['build', '_browserSync', '_watch'])
+  serve() {
   }
 
   @Task()
   _watch() {
     gulp.watch(['../client/**/*.ts'], () => runSequence('_buildClientApp', '_browserSyncReload'));
-  }
-
-  @Task('serve', ['build', '_browserSync', '_watch'])
-  serve() {
   }
 
   @Task()
@@ -103,7 +108,7 @@ export class GulpFile {
       },
       logFileChanges: false
     });
-    
+
     console.log('sync');
   }
 
@@ -142,9 +147,15 @@ export class GulpFile {
   }
 
   @Task()
-  _transferDependencies() {
+  _transferJsDependencies() {
     return gulp.src(this._clientConfig.javascript.src)
       .pipe(gulp.dest(this._clientConfig.outDir.javaScript));
+  }
+
+  @Task()
+  _transferCssDependencies() {
+    return gulp.src(this._clientConfig.css.src)
+      .pipe(gulp.dest(this._clientConfig.outDir.css));
   }
 
   @Task()

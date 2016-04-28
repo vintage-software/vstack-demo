@@ -1,7 +1,6 @@
 # vstack-demo
-Gulp, Node, Angular2, Typescript + C# MVC6 Bootstrap
 
-An opinionated boostrap project for client, server and tooling. All done in typescript.
+The Vintage Software Stack. An opinionated full stack solution for creating cutting edge web apps including one server, multiple clients, and tooling.
 
 ####Server:
 - Language: [Roslyn (C# 6)](https://github.com/dotnet/roslyn)

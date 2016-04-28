@@ -9,7 +9,7 @@ import 'rxjs/add/operator/combineLatest';
 @Injectable()
 export class AuthService {
   loggedInEmployee$: Observable<Employee>;
-  private _loggedInEmployeeId$: BehaviorSubject<number>;
+  loggedInEmployeeId$: BehaviorSubject<number>;
 
   constructor(private _graphService: GraphService) {
     let currentId = this._getAuthenticatedEmployeeId();
@@ -17,8 +17,8 @@ export class AuthService {
       this._graphService.companyService.get(currentId).toList();
     }
 
-    this._loggedInEmployeeId$ = new BehaviorSubject<number>(currentId);
-    this.loggedInEmployee$ = this._loggedInEmployeeId$.combineLatest(this._graphService.graph$)
+    this.loggedInEmployeeId$ = new BehaviorSubject<number>(currentId);
+    this.loggedInEmployee$ = this.loggedInEmployeeId$.combineLatest(this._graphService.graph$)
       .map(x => {
         let id = x[0];
         let graph = x[1];
@@ -34,8 +34,8 @@ export class AuthService {
     result
       .do(employee => {
         let id = employee && employee.id;
-        window.sessionStorage.setItem('employeeId', id.toString());
-        this._loggedInEmployeeId$.next(id);
+        window.sessionStorage.setItem('employeeId', (id || '').toString());
+        this.loggedInEmployeeId$.next(id);
       })
       .subscribe();
 
