@@ -22,13 +22,13 @@
 <div *ngIf="getDepartmentObjectives(objective).length">
   <lable>Child Objectives</lable>
   <ul class="list-group">
-    <li *ngFor="#child of getDepartmentObjectives(objective)" class="list-group-item">{{ child.title }}</li>
+    <li *ngFor="let child of getDepartmentObjectives(objective)" class="list-group-item">{{ child.title }}</li>
   </ul>
 </div>
 
 <div *ngIf="getCompanyObjectives(objective).length">
   <lable>Parent Objectives</lable>
   <ul class="list-group">
-    <li *ngFor="#parent of getCompanyObjectives(objective)" class="list-group-item">{{ parent.title }}</li>
+    <li *ngFor="let parent of getCompanyObjectives(objective)" class="list-group-item">{{ parent.title }}</li>
   </ul>
 </div>

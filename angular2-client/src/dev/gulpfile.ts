@@ -154,7 +154,7 @@ export class GulpFile {
 
   @Task()
   _transferCssDependencies() {
-    return gulp.src(this._clientConfig.css.src)
+    return gulp.src(this._clientConfig.css.src.concat(this._clientConfig.css.src.map(i => `${i}.map`)))
       .pipe(gulp.dest(this._clientConfig.outDir.css));
   }
 

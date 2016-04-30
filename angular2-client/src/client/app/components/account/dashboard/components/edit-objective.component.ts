@@ -6,7 +6,7 @@ import {DepartmentObjectiveService} from './../../../../services/department-obje
 
 @Component({
   selector: 'edit-objective',
-  templateUrl: '/app/account/dashboard/components/edit-objective.component.html',
+  templateUrl: '/app/components/account/dashboard/components/edit-objective.component.html',
 })
 export class EditObjective {
   @Input() objective: Objective;
@@ -58,10 +58,10 @@ export class EditObjective {
   }
 
   getDepartmentObjectives(objective: Objective) {
-    return objective && !(<any>objective).departmentId ? objective.objectiveAssociations.map(i => i.departmentObjective) : [];
+    return (objective && !(<any>objective).departmentId) ? objective.objectiveAssociations.map(i => i.departmentObjective) : [];
   }
 
   getCompanyObjectives(objective: Objective) {
-    return objective && (<any>objective).departmentId ? objective.objectiveAssociations.map(i => i.companyObjective) : [];
+    return (objective && (<any>objective).departmentId) ? objective.objectiveAssociations.map(i => i.companyObjective) : [];
   }
 }

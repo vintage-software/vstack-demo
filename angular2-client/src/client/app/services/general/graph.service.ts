@@ -24,7 +24,8 @@ export class GraphService extends BaseGraphService<Graph> {
     super([
       new ServiceConfig<Company, Graph>(
         companyService, (graph, collection) => graph.companies = collection, [
-          new Relation('employees', employeeService, 'companyId', true)
+          new Relation('employees', employeeService, 'companyId', true),
+          new Relation('companyObjectives', companyObjectiveService, 'companyId', true)
         ]),
       new ServiceConfig<Employee, Graph>(
         employeeService, (graph, collection) => graph.employees = collection, [
@@ -32,6 +33,7 @@ export class GraphService extends BaseGraphService<Graph> {
         ]),
       new ServiceConfig<CompanyObjective, Graph>(
         companyObjectiveService, (graph, collection) => graph.companyObjectives = collection, [
+          new Relation('company', companyService, 'companyId', false),
           new Relation('objectiveAssociations', objectiveAssociationService, 'companyObjectiveId', true)
         ]),
       new ServiceConfig<DepartmentObjective, Graph>(
@@ -44,5 +46,6 @@ export class GraphService extends BaseGraphService<Graph> {
           new Relation('companyObjective', companyObjectiveService, 'companyObjectiveId', false)
         ])
     ]);
+    this.graph$.do(i => console.log('graph', i)).subscribe();
   }
 }

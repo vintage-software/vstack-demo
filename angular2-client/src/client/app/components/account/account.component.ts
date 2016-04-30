@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES, Location, RouteConfig} from 'angular2/router';
+import {Location} from 'angular2/platform/common';
+import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {ProfileComponent} from './profile/profile.component';
 import {SettingsComponent} from './settings/settings.component';

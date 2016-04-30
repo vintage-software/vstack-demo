@@ -3,7 +3,7 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-    <objectives [companyObjectives]="(employee$ | async)?.company.companyObjectives" (onObjectiveSelect)="onObjectiveSelect($event)"></objectives>
+    <objectives [companyObjectives]="(employee$ | async)?.company?.companyObjectives" (onObjectiveSelect)="onObjectiveSelect($event)"></objectives>
   </div>
   <div class="col-md-6">
     <edit-objective [objective]="selectedObjective" (onSubmit)="onObjectiveSubmit($event)"></edit-objective>

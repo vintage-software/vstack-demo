@@ -1,8 +1,8 @@
 <div class="list-group">
-  <a *ngFor="#companyObjective of companyObjectives" class="list-group-item" (click)="objectiveClicked($event, companyObjective)">
+  <a *ngFor="let companyObjective of companyObjectives" class="list-group-item" (click)="objectiveClicked($event, companyObjective)">
     <h4 class="list-group-item-heading">{{ companyObjective.title }}</h4>
     <p class="list-group-item-text">{{ companyObjective.description }}</p>
-    <a *ngFor="#objectiveAssociation of companyObjective.objectiveAssociations" class="list-group-item" (click)="objectiveClicked($event, objectiveAssociation.departmentObjective)">
+    <a *ngFor="let objectiveAssociation of companyObjective.objectiveAssociations" class="list-group-item" (click)="objectiveClicked($event, objectiveAssociation.departmentObjective)">
       <h4 class="list-group-item-heading">{{ objectiveAssociation.departmentObjective?.title }}</h4>
       <p class="list-group-item-text">{{ objectiveAssociation.departmentObjective?.description }}</p>
     </a>

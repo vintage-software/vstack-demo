@@ -15,31 +15,31 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-beta.14",
+    "angular2": "2.0.0-beta.17",
     "es6-shim": "0.35.0",
-    "express": "4.13.4",
+    "express": "^4.13.4",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.25",
-    "vstack-graph": "^0.1.5",
-    "zone.js": "0.6.6"
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "^0.19.26",
+    "vstack-graph": "^0.1.10",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "browser-sync": "^2.12.5",
-    "del": "2.2.0",
-    "gulp": "3.9.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "2.6.0",
     "gulp-inject": "^4.0.0",
     "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "1.6.0",
-    "gulp-tslint": "4.3.5",
-    "gulp-typescript": "2.13.0",
-    "gulp-util": "3.0.7",
-    "gulpclass": "0.1.0",
-    "run-sequence": "1.1.5",
-    "tslint": "3.7.4",
-    "typescript": "1.8.10",
-    "typings": "0.7.12"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^2.13.0",
+    "gulp-util": "^3.0.7",
+    "gulpclass": "^0.1.0",
+    "run-sequence": "^1.1.5",
+    "tslint": "^3.8.1",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
   }
 }

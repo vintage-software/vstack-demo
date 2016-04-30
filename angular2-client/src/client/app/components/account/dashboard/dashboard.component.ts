@@ -11,7 +11,7 @@ import {GraphService} from './../../../services/general/graph.service';
 
 @Component({
   selector: 'dashboard-component',
-  templateUrl: '/app/account/dashboard/dashboard.component.html',
+  templateUrl: '/app/components/account/dashboard/dashboard.component.html',
   directives: [Objectives, EditObjective]
 })
 export class DashboardComponent implements OnInit {

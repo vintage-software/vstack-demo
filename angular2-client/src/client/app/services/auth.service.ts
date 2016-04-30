@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
-import {BehaviorSubject} from 'rxjs/subject/BehaviorSubject';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 import {Employee} from './../model/employee';
 import {GraphService} from './general/graph.service';
