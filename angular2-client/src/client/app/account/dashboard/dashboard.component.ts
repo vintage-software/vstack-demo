@@ -4,14 +4,14 @@ import {Subscription} from 'rxjs/Subscription';
 
 import {Objectives} from './components/objectives.component';
 import {EditObjective} from './components/edit-objective.component';
-import {Employee} from './../../../model/employee';
-import {Objective} from './../../../model/objective';
-import {AuthService} from './../../../services/auth.service';
-import {GraphService} from './../../../services/general/graph.service';
+import {Employee} from './../../model/employee';
+import {Objective} from './../../model/objective';
+import {AuthService} from './../../services/auth.service';
+import {GraphService} from './../../services/general/graph.service';
 
 @Component({
   selector: 'dashboard-component',
-  templateUrl: '/app/components/account/dashboard/dashboard.component.html',
+  templateUrl: '/app/account/dashboard/dashboard.component.html',
   directives: [Objectives, EditObjective]
 })
 export class DashboardComponent implements OnInit {

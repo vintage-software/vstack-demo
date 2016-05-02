@@ -1,12 +1,12 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {FormBuilder, ControlGroup, AbstractControl} from 'angular2/common';
-import {Objective} from './../../../../model/objective';
-import {CompanyObjectiveService} from './../../../../services/company-objective.service';
-import {DepartmentObjectiveService} from './../../../../services/department-objective.service';
+import {Objective} from './../../../model/objective';
+import {CompanyObjectiveService} from './../../../services/company-objective.service';
+import {DepartmentObjectiveService} from './../../../services/department-objective.service';
 
 @Component({
   selector: 'edit-objective',
-  templateUrl: '/app/components/account/dashboard/components/edit-objective.component.html',
+  templateUrl: '/app/account/dashboard/components/edit-objective.component.html',
 })
 export class EditObjective {
   @Input() objective: Objective;

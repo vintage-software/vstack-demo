@@ -7,7 +7,7 @@ import {SettingsComponent} from './settings/settings.component';
 
 @Component({
   selector: 'account-component',
-  templateUrl: '/app/components/account/account.component.html',
+  templateUrl: '/app/account/account.component.html',
   directives: [ ROUTER_DIRECTIVES ]
 })
 @RouteConfig([

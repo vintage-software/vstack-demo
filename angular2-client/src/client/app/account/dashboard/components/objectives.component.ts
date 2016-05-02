@@ -1,10 +1,10 @@
 import {Component, EventEmitter, Input, Output} from 'angular2/core';
-import {CompanyObjective} from './../../../../model/company-objective';
-import {Objective} from './../../../../model/objective';
+import {CompanyObjective} from './../../../model/company-objective';
+import {Objective} from './../../../model/objective';
 
 @Component({
   selector: 'objectives',
-  templateUrl: '/app/components/account/dashboard/components/objectives.component.html'
+  templateUrl: '/app/account/dashboard/components/objectives.component.html'
 })
 export class Objectives {
   @Input() companyObjectives: CompanyObjective[];
