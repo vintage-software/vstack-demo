@@ -1,0 +1,8 @@
+<a [routerLink]="['/']">Home</a>
+<a [routerLink]="['/account']">Account</a>
+<a [routerLink]="['/login']">Login</a>
+
+<div class="container">
+    <h1>Welcome {{(loggedInEmployee$ | async)?.emailAddress}}</h1>
+    <router-outlet></router-outlet>
+</div>

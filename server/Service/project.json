@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Service Class Library",
+  "authors": [ "shaar" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "System.Collections": "4.0.10-beta-23019",
+    "System.Linq": "4.0.0-beta-23019",
+    "System.Threading": "4.0.10-beta-23019",
+    "System.Runtime": "4.0.10-beta-23019",
+    "Microsoft.CSharp": "4.0.0-beta-23019",
+    "Microsoft.Framework.Configuration": "1.0.0-beta8",
+    "RestSharp": "105.1.0"
+  },
+
+  "frameworks": {
+    "net46": {
+      "dependencies": {
+        "Mapper": "1.0.0-*"
+      }
+    }
+  }
+}

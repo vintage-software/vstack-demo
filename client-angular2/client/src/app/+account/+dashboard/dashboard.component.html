@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h2><small>Company Objectives</small></h2>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-objectives [companyObjectives]="(employee$ | async)?.company?.companyObjectives" (onObjectiveSelect)="onObjectiveSelect($event)"></app-objectives>
+  </div>
+  <div class="col-md-6">
+    <app-edit-objective [objective]="selectedObjective" (onSubmit)="onObjectiveSubmit($event)"></app-edit-objective>
+  </div>
+</div>

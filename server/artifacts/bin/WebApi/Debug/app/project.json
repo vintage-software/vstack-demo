@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "WebApi": "1.0.0"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel"
+  },
+  "frameworks": {
+    "dnx46": {
+      "dependencies": {}
+    }
+  },
+  "exclude": [
+    "wwwroot",
+    "node_modules"
+  ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ],
+  "entryPoint": "WebApi",
+  "loadable": false
+}

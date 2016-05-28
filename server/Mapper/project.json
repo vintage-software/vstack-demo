@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "description": "Mapper Class Library",
+  "authors": [ "shaar" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "dependencies": {
+
+  },
+  "frameworks": {
+    "net46": {
+      "dependencies": {
+        "Domain": "1.0.0-*",
+        "EntityFramework": "6.1.3"
+      }
+    }
+  }
+}

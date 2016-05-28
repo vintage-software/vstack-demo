@@ -1,0 +1,36 @@
+syntax: glob
+*.orig
+*.bak
+*.cache
+*.csproj.user
+*.lib
+*.log
+*.obj
+*.pdb
+*.scssc
+*.sdcs
+*.suo
+*.user
+*.vspscc
+*.lock.json
+
+compilerconfig.json
+fake-index.html
+npm-debug.log
+StyleCop.Cache
+
+syntax: regexp
+(?i)/bin/.*
+(?i)/obj/.*
+(?i)\.vs/.*
+(?i)/temp/.*
+(?i)/build/.*
+(?i)/\.idea\.*
+(?i)generated/.*
+(?i)publishprofiles/.*
+(?i)testResults/.*
+(?i)/node_modules/.*
+(?i)/bower_components/.*
+(?i)/includes/userControlsLibrary/.*
+(?i)/includes/serverControlsLibrary/.*
+(?i)/resources/.*\.(html|dat)$

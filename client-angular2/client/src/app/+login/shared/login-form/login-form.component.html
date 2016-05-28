@@ -1,0 +1,15 @@
+<form [ngFormModel]="form" (ngSubmit)="submitted()">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input [ngFormControl]="email" type="email" class="form-control" id="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input [ngFormControl]="password" type="password" class="form-control" id="password" placeholder="Password">
+  </div>
+
+  <div *ngIf="email.touched && !email.valid" class="alert alert-danger" role="alert">Email is invalid</div>
+  <div *ngIf="password.touched && !password.valid" class="alert alert-danger" role="alert">Password is invalid</div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

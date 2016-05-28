@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs">
+  <li role="presentation" [class.active]="location.path() === '/account'"><a [routerLink]="['/account']">Dashboard</a></li>
+  <li role="presentation" [class.active]="location.path() === '/account/profile'"><a [routerLink]="['./profile']">Profile</a></li>
+  <li role="presentation" [class.active]="location.path() === '/account/settings'"><a [routerLink]="['./settings']">Settings</a></li>
+</ul>
+<div class="tab-content">
+  <router-outlet></router-outlet>
+</div>
