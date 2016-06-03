@@ -23,7 +23,8 @@
     "Microsoft.ApplicationInsights.AspNet": "1.0.0-beta8",
     "Swashbuckle.SwaggerGen": "6.0.0-rc1-final",
     "Swashbuckle.SwaggerUi": "6.0.0-rc1-final",
-    "Vstack.Api": "1.0.0.1"
+    "Vstack.Api": "1.0.0.1",
+    "StyleCop.Analyzers": "1.0.0"
   },
 
   "commands": {

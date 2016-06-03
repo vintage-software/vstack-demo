@@ -62,91 +62,91 @@ namespace Mapper.General
                     departmentId: (int)Departments.R_Jedi,
                     firstName: "Luke",
                     lastName: "Skywalker",
-                    emailAddress: "lskywalker@rebelalliance.com"),
+                    emailAddress: "dev+lskywalker@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_Jedi,
                     firstName: "Obi-Wan",
                     lastName: "Kenobi",
-                    emailAddress: "okenobi@rebelalliance.com"),
+                    emailAddress: "dev+okenobi@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_Jedi,
                     firstName: "Minch",
                     lastName: "Yoda",
-                    emailAddress: "myoda@rebelalliance.com"),
+                    emailAddress: "dev+myoda@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_Political,
                     firstName: "R2",
                     lastName: "D2",
-                    emailAddress: "r2d2@rebelalliance.com"),
+                    emailAddress: "dev+r2d2@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_Political,
                     firstName: "C",
                     lastName: "3PO",
-                    emailAddress: "c3po@rebelalliance.com"),
+                    emailAddress: "dev+c3po@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_War,
                     firstName: "Han",
                     lastName: "Solo",
-                    emailAddress: "hsolo@rebelalliance.com"),
+                    emailAddress: "dev+hsolo@vintagesoftware.com"),
 
                  new Employee(
                     companyId: RebelAllianceId,
                     departmentId: (int)Departments.R_Political,
                     firstName: "Leia",
                     lastName: "Organa",
-                    emailAddress: "lorgana@rebelalliance.com"),
+                    emailAddress: "dev+lorgana@vintagesoftware.com"),
 
                  new Employee(
                      companyId: RebelAllianceId,
                      departmentId: (int)Departments.R_War,
                      firstName: "Chewbacca",
                      lastName: "Chewbacca",
-                     emailAddress: "chewbacca@rebelalliance.com"),
+                     emailAddress: "dev+chewbacca@vintagesoftware.com"),
 
                  new Employee(
                     companyId: GalacticEmpireId,
                     departmentId: (int)Departments.G_Defense,
                     firstName: "Darth",
                     lastName: "Vader",
-                    emailAddress: "dvader@galacticempire.com"),
+                    emailAddress: "dev+dvader@vintagesoftware.com"),
 
                  new Employee(
                     companyId: GalacticEmpireId,
                     departmentId: (int)Departments.G_Defense,
                     firstName: "Sheev",
                     lastName: "Palpatine",
-                    emailAddress: "spalpatine@galacticempire.com"),
+                    emailAddress: "dev+spalpatine@vintagesoftware.com"),
 
                  new Employee(
                     companyId: GalacticEmpireId,
                     departmentId: (int)Departments.G_DeathStar,
                     firstName: "Wilfuff",
                     lastName: "Tarkin",
-                    emailAddress: "wtarkin@galacticempire.com"),
+                    emailAddress: "dev+wtarkin@vintagesoftware.com"),
 
                  new Employee(
                     companyId: GalacticEmpireId,
                     departmentId: (int)Departments.G_Economy,
                     firstName: "Jabba",
                     lastName: "The Hutt",
-                    emailAddress: "jhutt@galacticempire.com"),
+                    emailAddress: "dev+jhutt@vintagesoftware.com"),
 
                  new Employee(
                     companyId: GalacticEmpireId,
                     departmentId: (int)Departments.G_Defense,
                     firstName: "Boba",
                     lastName: "Fett",
-                    emailAddress: "bfett@galacticempire.com")
+                    emailAddress: "dev+bfett@vintagesoftware.com")
              };
 
             context.Employees.AddRange(domains);
@@ -159,11 +159,11 @@ namespace Mapper.General
         {
             List<CompanyObjective> domains = new List<CompanyObjective>()
             {
-                new CompanyObjective(RebelAllianceId, "Restore the Galactic Republic", ""),
-                new CompanyObjective(RebelAllianceId, "Restore the Jedi Order", ""),
+                new CompanyObjective(RebelAllianceId, "Restore the Galactic Republic", "The Republic is crumbling under attacks by the ruthless Sith Lord, Count Dooku. There are heroes on both sides. Evil is everywhere."),
+                new CompanyObjective(RebelAllianceId, "Restore the Jedi Order", "the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed."),
 
-                new CompanyObjective(GalacticEmpireId, "Crush the rebellion", ""),
-                new CompanyObjective(GalacticEmpireId, "Expand the Gallactic Empire", "")
+                new CompanyObjective(GalacticEmpireId, "Crush the rebellion", "It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy."),
+                new CompanyObjective(GalacticEmpireId, "Expand the Gallactic Empire", "the GALACTIC EMPIRE has secretly begun construction on a new armored space station even more powerful than the first dreaded Death Star. When completed, this ultimate weapon will spell certain doom for the small band of rebels struggling to restore freedom to the galaxy...")
             };
 
             context.CompanyObjectives.AddRange(domains);

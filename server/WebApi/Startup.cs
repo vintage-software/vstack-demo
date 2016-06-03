@@ -14,14 +14,13 @@ using Service.General;
 using Service.Objectives.Services;
 using Service.Users.Services;
 using Swashbuckle.SwaggerGen;
-using Swashbuckle.SwaggerGen.XmlComments;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Globalization;
+using Vstack.Api.Web.General;
 using Vstack.Services.Mapper.General;
 using Vstack.Services.Security;
-using Vstack.Api.Web.General;
 using WebApi.General;
 
 namespace WebApi

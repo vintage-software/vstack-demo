@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10C286D5-F530-4F4E-8FE6-5AB61CDDEB53}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		vstack.ruleset = vstack.ruleset
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Domain", "Domain\Domain.xproj", "{91D8FA0E-47EC-44AB-B812-C831673494E8}"

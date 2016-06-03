@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "Service Class Library",
   "authors": [ "shaar" ],
@@ -13,7 +13,8 @@
     "System.Runtime": "4.0.10-beta-23019",
     "Microsoft.CSharp": "4.0.0-beta-23019",
     "Microsoft.Framework.Configuration": "1.0.0-beta8",
-    "RestSharp": "105.1.0"
+    "RestSharp": "105.1.0",
+    "StyleCop.Analyzers": "1.0.0"
   },
 
   "frameworks": {
