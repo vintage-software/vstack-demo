@@ -1,7 +1,7 @@
-﻿using Mapper.Users;
-using Service.General;
+﻿using Service.General;
 using Service.Users.Converters;
 using Service.Users.Dto;
+using Service.Users.Mappers;
 using System.Collections.Generic;
 using Vstack.Services.Service.General;
 using Vstack.Services.Service.Services;

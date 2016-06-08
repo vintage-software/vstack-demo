@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 using Vstack.Services.Data.EntityFramework;
 
-namespace Mapper.General.Conventions
+namespace Service.General.Persistence.Conventions
 {
     public class EmployeeConfiguration
         : EntityTypeConfiguration<Employee>

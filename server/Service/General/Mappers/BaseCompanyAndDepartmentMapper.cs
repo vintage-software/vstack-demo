@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Vstack.Services.Service.General;
 
-namespace Mapper.General.Mappers
+namespace Service.General.Mappers
 {
     public abstract class BaseCompanyAndDepartmentMapper<TDmn>
         : BaseMapper<TDmn>, ICompanyMapper<TDmn>, IDepartmentMapper<TDmn>

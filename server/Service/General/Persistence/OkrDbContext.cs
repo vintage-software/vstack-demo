@@ -1,13 +1,13 @@
 ﻿using Domain.Objectives;
 using Domain.Users;
-using Mapper.General.Conventions;
+using Service.General.Persistence.Conventions;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Vstack.Services.Data.EntityFramework;
 using Vstack.Services.Data.EntityFramework.Conventions;
 using Vstack.Services.General;
 
-namespace Mapper.General
+namespace Service.General.Persistence
 {
     public class OkrDbContext : VintageEfDbContext
     {

@@ -1,10 +1,8 @@
-﻿using System;
-using Service.General.Dto;
-using Vstack.Services.Service.Dto;
+﻿using Service.General.Dto;
 
 namespace Service.Objectives.Dto
 {
-    public class ObjectiveAssociation : SecureDto, IDepartmentDto
+    public class ObjectiveAssociation : BaseDto, IDepartmentDto
     {
         public int Id { get; set; }
 

@@ -1,8 +1,8 @@
-﻿using Mapper.General.Mappers;
+﻿using Service.General.Mappers;
 using Vstack.Services.Mapper.General;
 using Dmn = Domain.Users;
 
-namespace Mapper.Users
+namespace Service.Users.Mappers
 {
     public class EmployeeMapper
         : BaseDepartmentMapper<Dmn.Employee>

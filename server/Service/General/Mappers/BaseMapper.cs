@@ -1,7 +1,8 @@
-﻿using Vstack.Services.Data.General;
+﻿using Service.General.Persistence;
+using Vstack.Services.Data.General;
 using Vstack.Services.Mapper.Mappers;
 
-namespace Mapper.General.Mappers
+namespace Service.General.Mappers
 {
     public abstract class BaseMapper<TDmn> : BaseEfMapper<OkrDbContext, TDmn>
         where TDmn : class, IDataDomain

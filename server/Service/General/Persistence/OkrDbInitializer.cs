@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using Vstack.Services.General;
 
-namespace Mapper.General
+namespace Service.General.Persistence
 {
     public class OkrDbInitializer : DropCreateDatabaseIfModelChanges<OkrDbContext>
     {

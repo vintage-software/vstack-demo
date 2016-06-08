@@ -5,7 +5,7 @@ using Vstack.Services.Data.General;
 using Vstack.Services.Mapper.General;
 using Vstack.Services.Service.General;
 
-namespace Mapper.General.Mappers
+namespace Service.General.Mappers
 {
     public abstract class BaseCompanyMapper<TDmn>
         : BaseMapper<TDmn>, IChildMapper<TDmn>

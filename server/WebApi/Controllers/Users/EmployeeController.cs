@@ -1,5 +1,5 @@
-﻿using Mapper.Users;
-using Service.Users.Converters;
+﻿using Service.Users.Converters;
+using Service.Users.Mappers;
 using Service.Users.Services;
 using WebApi.General;
 using Dmn = Domain.Users;

@@ -1,11 +1,10 @@
 ﻿using Service.General.Dto;
 using Service.Objectives.Dto;
 using System.ComponentModel.DataAnnotations;
-using Vstack.Services.Service.Dto;
 
 namespace Service.Users.Dto
 {
-    public class Employee : SecureDto, IDepartmentDto
+    public class Employee : BaseDto, IDepartmentDto
     {
         public int Id { get; set; }
 

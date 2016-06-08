@@ -20,7 +20,7 @@
   "frameworks": {
     "net46": {
       "dependencies": {
-        "Mapper": "1.0.0-*"
+        "Domain": "1.0.0-*"
       }
     }
   }

@@ -1,5 +1,5 @@
-﻿using Mapper.Objectives;
-using Service.Objectives.Converters;
+﻿using Service.Objectives.Converters;
+using Service.Objectives.Mappers;
 using Service.Objectives.Services;
 using WebApi.General;
 using Dmn = Domain.Objectives;

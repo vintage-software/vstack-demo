@@ -4,7 +4,7 @@ using System.Linq;
 using Vstack.Services.Mapper.General;
 using Vstack.Services.Service.General;
 
-namespace Mapper.General.Mappers
+namespace Service.General.Mappers
 {
     public abstract class BaseDepartmentMapper<TDmn>
         : BaseMapper<TDmn>, IDoubleChildMapper<TDmn>

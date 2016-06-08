@@ -1,10 +1,9 @@
 ﻿using Service.General.Dto;
 using System.ComponentModel.DataAnnotations;
-using Vstack.Services.Service.Dto;
 
 namespace Service.Objectives.Dto
 {
-    public class KeyResult : SecureDto, IDepartmentDto
+    public class KeyResult : BaseDto, IDepartmentDto
     {
         public int Id { get; set; }
 

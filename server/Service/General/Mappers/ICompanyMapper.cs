@@ -4,7 +4,7 @@ using System.Linq;
 using Vstack.Services.Mapper.General;
 using Vstack.Services.Service.General;
 
-namespace Mapper.General.Mappers
+namespace Service.General.Mappers
 {
     public interface ICompanyMapper<TDmn> : IMapper<TDmn>
         where TDmn : class, ICompanyDomain

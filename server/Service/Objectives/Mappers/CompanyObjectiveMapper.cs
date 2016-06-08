@@ -1,8 +1,8 @@
-﻿using Mapper.General.Mappers;
+﻿using Service.General.Mappers;
 using Vstack.Services.Mapper.General;
 using Dmn = Domain.Objectives;
 
-namespace Mapper.Objectives
+namespace Service.Objectives.Mappers
 {
     public class CompanyObjectiveMapper
         : BaseCompanyMapper<Dmn.CompanyObjective>
